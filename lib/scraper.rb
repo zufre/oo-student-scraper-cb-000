@@ -9,7 +9,7 @@ class Scraper
     students = []
     doc.css(".student-card").each do |student|
       students.push(name: student.css(".student-name").text,
-      location: student.css(".student-location").text, 
+      location: student.css(".student-location").text,
       profile_picture: student.css('a').attribute("href").value)
     end
   end
